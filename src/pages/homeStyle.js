@@ -5,7 +5,9 @@ import line from "./line.png";
 export const Form = styled.form`
 background-image: url(${car});
 background-size: cover;
-color: black;
+color: white;
+text-shadow: -1.2px 1px 0 black;
+font-size: 23px;
 height: 300px;
 display: flex;
 flex-flow: column nowrap;
@@ -34,6 +36,7 @@ top: 50%;
 height: 100px;
 width: 100%;
 margin-top: 10px;
+font-size: 24px;
 `
 
 export const FeatDeals = styled.form`

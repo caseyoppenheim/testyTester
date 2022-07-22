@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import tire from "./tire.jpg";
 import bumper from "./tempBumper.jpg";
 import levelingKit from "./levelingKit.jpg";
@@ -22,16 +22,29 @@ function ResultsPage(){
 	)
 }
 
+function quizResult(year, make, model, part){
+	self.Year = year;
+ 	self.Make = make;
+	self.Model = model;
+	self.Part = part;
+ }
 
 
 const Home = () => {
+	const[year, setYear] = useState();
+	
+	const[make, setMake] = useState();
+	
+	const[model, setModel] = useState();
+	
+	const[part, setPart] = useState();
 return (
 	<div>
 	<Form>	
 	<form id="form1">
          <h2>Find Parts For Your Vehicle</h2>
          <formOptions>
-            <select id="year">
+		 	<select id="year" value ={year} onChange={(e) => setYear(e.target.value)}>
                <option value="0">year</option>
                <option value="2022">2022</option>
                <option value="2021">2021</option>
@@ -43,7 +56,7 @@ return (
                <option value="2015">2015</option>
             </select>
             
-            <select id="make">
+            <select id="make" value ={make} onChange={(e) => setMake(e.target.value)}>
                <option value="0">make</option>
                <option value="Ford">Ford</option>
                <option value="Jeep">Jeep</option>
@@ -53,7 +66,7 @@ return (
                <option value="GMC">GMC</option>
                <option value="Ram">Ram</option>
             </select>
-            <select id="model">
+            <select id="model" value ={model} onChange={(e) => setModel(e.target.value)}>
                <option value="0">model</option>
                <option value="F-150">F-150</option>
                <option value="Gladiator">Gladiator</option>
@@ -67,7 +80,7 @@ return (
                <option value="Silverado">Silverado</option>
                <option value="Sierra">Sierra</option>
             </select>
-            <select id="part">
+            <select id="part" value ={part} onChange={(e) => setPart(e.target.value)}>
                <option value="All Part">part</option>
                <option value="Bumper">Bumper</option>
                <option value="Tire">Tire</option>
@@ -75,7 +88,7 @@ return (
                <option value="All Part">All Parts</option>
             </select>
          </formOptions>
-         <ResultsPage/>
+         <ResultsPage onClick={quizResult(year, make, model, part)}/>
          
       </form>
 	  </Form>
@@ -118,3 +131,11 @@ return (
 };
 
 export default Home;
+export const self =
+   {
+      Year: Home.year,
+      Make: Home.make,
+      Model: Home.model,
+      Part: Home.part
+
+   };

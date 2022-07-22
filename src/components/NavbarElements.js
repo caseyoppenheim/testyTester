@@ -6,10 +6,13 @@ export const Nav = styled.nav`
 height: 85px;
 display: flex;
 justify-content: flex-start;
-padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
-align-items: flex-end;
+align-items: center;
+font-size: 20px;
 `;
+export const Logo = styled.nav`
+align-items: flex-start;
+`
 
 export const NavLink = styled(Link)`
 color: #808080;
@@ -20,7 +23,7 @@ padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 &.active {
-	color: #4d4dff;
+	color: red;
 }
 `;
 

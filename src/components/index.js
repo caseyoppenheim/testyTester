@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavLink, NavMenu }
+import { Nav, NavLink, NavMenu, Logo }
 	from "./NavbarElements";
 import companyLogo from "./logo.png";
 
@@ -9,9 +9,9 @@ const Navbar = () => {
 return (
 	<>
 	<Nav>
-        <logo>
-            <img src ={companyLogo} width="300"></img>
-        </logo>
+        <Logo>
+            <img src ={companyLogo} width="400px"></img>
+        </Logo>
         <search>
             <input type="text" placeholder="Search..."/>
         </search>
