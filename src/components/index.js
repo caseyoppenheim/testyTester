@@ -1,26 +1,36 @@
 import React from "react";
 import { Nav, NavLink, NavMenu }
 	from "./NavbarElements";
+import companyLogo from "./logo.png";
+
+
 
 const Navbar = () => {
 return (
 	<>
 	<Nav>
+        <logo>
+            <img src ={companyLogo} width="300"></img>
+        </logo>
+        <search>
+            <input type="text" placeholder="Search..."/>
+        </search>
 		<NavMenu>
 		<NavLink to="/about" activeStyle>
-			About
+			Support
 		</NavLink>
 		<NavLink to="/contact" activeStyle>
-			Contact Us
+			My Account
 		</NavLink>
 		<NavLink to="/blogs" activeStyle>
-			Blogs
+			Stores Near Me
 		</NavLink>
 		<NavLink to="/sign-up" activeStyle>
-			Sign Up
+			Cart
 		</NavLink>
 		</NavMenu>
 	</Nav>
+    
 	</>
 );
 };
