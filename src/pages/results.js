@@ -1,9 +1,51 @@
 import React from "react";
-import { RefineHead, RefineResults, ChangeVeh, Silly, ResultHeader, ResultsPage, Column1, Column2 } from "./resultStyle";
+import { RefineHead, RefineResults, ChangeVeh, Silly, ResultHeader, ResultsPage, Column1, Column2, ResultGrid, GridEl } from "./resultStyle";
+import { useNavigate } from "react-router-dom";
+
+function ResultGridFun(){
+    return(
+        <ResultGrid>
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+        </ResultGrid>
+    )
+}
+
+function ChangeVehFun(){
+    let nav = useNavigate();
+	const routeChange = () =>{
+		let path = '/';
+		nav(path);
+
+	}
+
+	return (
+		<button color="primary" className="px-4"onClick={routeChange}
+              >
+              Change Vehicle
+            </button>
+	)
+   
+}
 
 const Results = () => {
 return (
-	<div>
+	<ResultsPage>
         <Column1>
             <Silly> 
                 <img src="./currveh.jfif"  height="60px"/>
@@ -13,16 +55,8 @@ return (
                 </script> */}
             </Silly>
             
-            <ChangeVeh>
-                <button id="changeVehicle" type="button" onclick="BackToMain()">Change Vehicle</button>
-                {/* <script>
-                    function BackToMain(){
-                        location.href="website.html";
-                    }
-                </script> */}
-            </ChangeVeh>
-
-
+            <ChangeVehFun />
+                
             <RefineHead> Refine By:</RefineHead>
             <RefineResults>
                 <select id="Brand">
@@ -48,11 +82,17 @@ return (
         </Column1>
         <Column2>
             <ResultHeader>
-                <script>
+                HELLOOOOOOO
+                {/* <script>
                     document.write("Showing " + localStorage["part"] + "s for " + localStorage["year"] + " " + localStorage["make"] + " " + localStorage["model"]);
-                </script>
+                </script> */}
         
             </ResultHeader>
+            
+            <div id="grid-container" class="grid">
+                <ResultGridFun />
+            </div>
+            
             <div id="grid-container" class="grid">
                 {/* <script type="text/javascript">
                     //document.getElementsByClassName("grid-container").innerHTML="<div class=\"grid-item\"></div>";
@@ -77,7 +117,7 @@ return (
                 </script> */}
             </div>
         </Column2>
-	</div>
+	</ResultsPage>
 );
 };
 

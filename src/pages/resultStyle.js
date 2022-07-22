@@ -53,3 +53,16 @@ text-align: center;
 export const Column2 = styled.form`
 width: 80%;
 `
+
+export const ResultGrid = styled.form`
+display: grid;
+grid-gap: 2px;
+box-sizing: border-box;
+grid-template-columns: [col1-start] auto  [col2-start] auto  [col3-start] auto;
+grid-template-rows: auto;
+`
+
+export const GridEl = styled.form`
+background-color: #ccc;
+height: 300px;
+`
