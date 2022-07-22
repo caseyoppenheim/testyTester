@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import car from "./car.jpg";
+import line from "./line.png";
 
-//backgroundImage: "url('/car.jpg')";
 export const Form = styled.form`
-background: #ffb3ff;
+background-image: url(${car});
 background-size: cover;
 color: black;
 height: 300px;
@@ -10,6 +11,7 @@ display: flex;
 flex-flow: column nowrap;
 align-items: center;
 justify-content: center;
+text-align: center;
 `
 
 
@@ -24,6 +26,7 @@ text-align: center;
 
 export const Deals = styled.form`
 display: flex;
+background-image: url(${line});
 align-items: center;
 justify-content: center;
 color: black;
@@ -40,4 +43,12 @@ flex-flow: row;
 justify-content: center;
 align-items: center;
 background-color: #ccc;
+`
+
+export const Deal1 = styled.form`
+display: flex; 
+flex-flow: column;
+align-items: center;
+font-size: 1vw;
+padding: 1%;
 `

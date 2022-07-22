@@ -1,27 +1,21 @@
 import React from "react";
 import { RefineHead, RefineResults, ChangeVeh, Silly, ResultHeader, ResultsPage, Column1, Column2, ResultGrid, GridEl } from "./resultStyle";
 import { useNavigate } from "react-router-dom";
+import littleCar from "./currveh.jfif";
+
+function dynamGrid(){
+    return(
+        <GridEl>
+        <div class="grid-item">1</div>
+        </GridEl>
+    )
+}
 
 function ResultGridFun(){
+    dynamGrid();
     return(
         <ResultGrid>
-        <GridEl>
-        <div class="grid-item">1</div>
-        </GridEl>
-
-        <GridEl>
-        <div class="grid-item">1</div>
-        </GridEl>
-
-        <GridEl>
-        <div class="grid-item">1</div>
-        </GridEl>
-        <GridEl>
-        <div class="grid-item">1</div>
-        </GridEl>
-        <GridEl>
-        <div class="grid-item">1</div>
-        </GridEl>
+            
         </ResultGrid>
     )
 }
@@ -48,7 +42,7 @@ return (
 	<ResultsPage>
         <Column1>
             <Silly> 
-                <img src="./currveh.jfif"  height="60px"/>
+                <img src={littleCar}  height="60px"/>
                 Current Vehicle: 
                 {/* <script> 
                     document.write(localStorage["year"] + " " + localStorage["make"] + " " + localStorage["model"]);
@@ -82,7 +76,7 @@ return (
         </Column1>
         <Column2>
             <ResultHeader>
-                HELLOOOOOOO
+                Showing _______ For ____________
                 {/* <script>
                     document.write("Showing " + localStorage["part"] + "s for " + localStorage["year"] + " " + localStorage["make"] + " " + localStorage["model"]);
                 </script> */}

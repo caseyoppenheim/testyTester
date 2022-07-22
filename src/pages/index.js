@@ -3,7 +3,7 @@ import tire from "./tire.jpg";
 import bumper from "./tempBumper.jpg";
 import levelingKit from "./levelingKit.jpg";
 import { useNavigate } from "react-router-dom";
-import {Form, formOptions, Deals, FeatDeals} from "./homeStyle.js";
+import {Form, formOptions, Deals, FeatDeals, Deal1} from "./homeStyle.js";
 
 
 function ResultsPage(){
@@ -15,7 +15,7 @@ function ResultsPage(){
 	}
 
 	return (
-		<button color="primary" className="px-4"onClick={routeChange}
+		<button color="white" className="px-4"onClick={routeChange}
               >
               see results
             </button>
@@ -83,22 +83,36 @@ return (
          <a>Shop Deals For Your Vehicle</a>
       </Deals>
       <FeatDeals>
-         <deal1>
+         <Deal1>
             <img id="deal1img"src={tire}></img>
             Mickey Thompson Baja Legend EXP Tires 
-         </deal1>
-         <deal2>
+         </Deal1>
+         <Deal1>
             <img id="deal2img" src={bumper} ></img>
-            Fab Fours Matrix Series Front Bumper with Pre-Runner Guard (Black) 
-         </deal2>
-         <deal3>
+            Fab Fours Matrix Series Front Bumper with Pre-Runner Guard (black)
+         </Deal1>
+         <Deal1>
             <img id="deal3img" src={levelingKit}></img>
             Pro Comp 2.5 Inch Leveling Lift Kit
-         </deal3>
+         </Deal1>
       </FeatDeals>
       <Deals>
          <a>Shop New Products</a>
       </Deals>
+	  <FeatDeals>
+         <Deal1>
+            <img id="deal1img"src={tire}></img>
+            Mickey Thompson Baja Legend EXP Tires 
+         </Deal1>
+         <Deal1>
+            <img id="deal2img" src={bumper} ></img>
+            Fab Fours Matrix Series Front Bumper with Pre-Runner Guard (Black) 
+         </Deal1>
+         <Deal1>
+            <img id="deal3img" src={levelingKit}></img>
+            Pro Comp 2.5 Inch Leveling Lift Kit
+         </Deal1>
+      </FeatDeals>
 	</div>
 );
 };
